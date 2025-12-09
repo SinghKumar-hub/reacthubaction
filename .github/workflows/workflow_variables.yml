@@ -1,5 +1,5 @@
 name: Testing workflow variables
-'on': workflow_dispatch
+on: workflow_dispatch
 env:
    cloud: google-cloud
 jobs:
@@ -8,8 +8,7 @@ jobs:
       env:
          Greeting: Hello
       steps:
-         -
-            name: says Hello Mona its Monday
-            run: echo "$Greeting $First_Name is using $cloud!"
-            env:
+         - name: says Hello Mona its Monday
+           run: echo "$Greeting $First_Name is using $cloud!"
+           env:
                First_Name: Sourav
